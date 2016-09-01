@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ninja Turtles!</title>
+		{% load staticfiles %}
+	</head>
+	<body>
+		{%if request.session.ninja == False%}
+			<h1>Ninja Turtles!</h1>
+			<img src="{% static 'Day_3_DisNinjas/tmnt.png' %}"><br>
+			<button><a href="/ninjas/ninja/blue">Leonardo!</a></button>
+			<button><a href="/ninjas/ninja/orange">Michelangelo!</a></button>
+			<button><a href="/ninjas/ninja/red">Raphael!</a></button>
+			<button><a href="/ninjas/ninja/purple">Donatello!</a></button>
+		{%elif request.session.blue == True%}
+			<h1>Leonardo!</h1>
+			<img src="{% static 'Day_3_DisNinjas/leonardo.jpg' %}">
+			<button><a href="/ninjas/reset">Back</a></button>
+		{%elif request.session.orange == True%}
+			<h1>Michelangelo!</h1>
+			<img src="{% static 'Day_3_DisNinjas/michelangelo.jpg' %}">
+			<button><a href="/ninjas/reset">Back</a></button>
+		{%elif request.session.red == True%}
+			<h1>Raphael!</h1>
+			<img src="{% static 'Day_3_DisNinjas/raphael.jpg' %}">
+			<button><a href="/ninjas/reset">Back</a></button>
+		{%elif request.session.purple == True%}
+			<h1>Donatello!</h1>
+			<img src="{% static 'Day_3_DisNinjas/donatello.jpg' %}">
+			<button><a href="/ninjas/reset">Back</a></button>
+		{%elif request.session.megan == True%}
+			<h1>Megan Fox!</h1>
+			<img src="{% static 'Day_3_DisNinjas/notapril.jpg' %}">
+			<button><a href="/ninjas/reset">Back</a></button>
+		{%endif%}
+	</body>
+</html>

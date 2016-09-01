@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ninja Gold</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'Day_3_Gold/text.css' %}">
+	</head>
+	<body>
+		<div id="wrapper">
+			<h3>Your Gold:</h3>
+			<p>{{request.session.gold}}</p>
+			<button><a href="/ninjagold/reset">Reset Your Gold!</a></button>
+			<div class="places">
+				<form action="/ninjagold/process" method="post">
+					{% csrf_token %}
+					<h2>Farm</h2>
+					<h3>(earns 10-20 gold)</h3>
+					<input type="hidden" name="val" value="farm">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div class="places">
+				<form action="/ninjagold/process" method="post">
+					{% csrf_token %}
+					<h2>Cave</h2>
+					<h3>(earns 5-10 gold)</h3>
+					<input type="hidden" name="val" value="cave">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div class="places">
+				<form action="/ninjagold/process" method="post">
+					{% csrf_token %}
+					<h2>House</h2>
+					<h3>(earns 2-5 gold)</h3>
+					<input type="hidden" name="val" value="house">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div class="places">
+				<form action="/ninjagold/process" method="post">
+					{% csrf_token %}
+					<h2>Casino</h2>
+					<h3>(earns/takes 0-50 gold)</h3>
+					<input type="hidden" name="val" value="casino">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div id="activities">
+				<h4>Activities</h4>
+				<div id="scroll">
+					{%for i in z%}
+						<p>{{i}}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

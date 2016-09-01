@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Success!</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1>Success! Welcome, 
+			{% for d in data %}
+				{{ d.first_name }}
+			{% endfor %}</h1>
+			<p>Successfully registered (or logged in)!</p>
+			<button><a href="/login/success/logout">Logout</a></button>
+			<button><a href="/courses/user_courses">Join a course!</a></button>
+		</div>
+	</body>
+</html>

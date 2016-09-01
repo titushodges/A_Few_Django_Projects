@@ -1,0 +1,22 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	margin: 0px auto;
+	width: 950px;
+}
+h4{
+	border: 1px solid black;
+	margin: 20px auto;
+	padding: 10px 10px 20px 10px;
+	width: 190px;
+	text-align: center;
+}
+h1{
+	border: 1px solid black;
+	margin: 20px auto;
+	padding: 10px 30px 20px 30px;
+	width: 200px;
+	text-align: center;
+}

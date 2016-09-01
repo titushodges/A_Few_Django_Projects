@@ -1,0 +1,11 @@
+#wrapper{
+	width: 950px;
+	margin: 0px auto;
+	padding: 20px;
+}
+#name{
+	display: inline-block;
+}
+#info{
+	display: inline-block;
+}

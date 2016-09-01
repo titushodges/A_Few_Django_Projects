@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete a course</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'text.css' %}">
+</head>
+	<body>
+		<div id="wrapper">
+			<h3>Are you sure you want to delete the following course?</h3>
+			<div id="name">
+				<p>Name:</p>
+				<p>Description:</p>
+			</div>
+			{% for course in courses %}
+				<div id="info">
+					<p>{{ course.course_name}}</p>
+					<p>{{ course.description }}</p>
+				</div>
+				<div id="buttons">
+					<button><a href="/courses/">No</a></button>
+					<button><a href="/courses/delete/{{ course.id }}">Yes! I want to delete this</a></button>
+				</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>

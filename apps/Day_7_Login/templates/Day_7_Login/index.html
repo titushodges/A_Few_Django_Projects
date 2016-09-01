@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Log in</h1>
+          {% if messages %}
+            {% for message in messages %}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        <form action='/login/login' method='POST'>
+          {% csrf_token %}
+          <label>
+            <p>Email:</p><input type="text" name="email">
+          </label>
+          <label>
+            <p>Password:</p><input type="password" name="password">
+          </label>
+          <input type="submit" value="Submit">
+        </form>
+        <button><a href="/login/register">Register</a></button>
+      </div>
+  </body>
+</html>

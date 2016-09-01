@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date and Time</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Day_1_TimeDisplay/text.css' %}">
+</head>
+	<body>
+		<div id="wrapper">
+			<h4>The current time and date:</h4>
+			<h1>{{ time | date:"M d, Y h:i"}}</h1>
+		</div>
+	</body>
+</html>
